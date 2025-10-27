@@ -1,0 +1,13 @@
+A hash table is a suitable data structure for fast lookups because it uses a hash function to map the key directly into an index, which requires near constant-time calls to search and insert. 
+Instead of needing to traverse all elements sequentially, as with a list, a hash table requires direct jump to where the contact should be stored. 
+Such efficiency is valuable with apps like contact management where speed and scalability are required.
+
+To handle collisions—cases where two names hash to the same index—I used separate
+chaining. This method stores multiple nodes in a linked list at the same index,
+maintaining access to all contacts while still allowing fast lookup. If a duplicate
+name is inserted, the program simply updates the phone number to prevent redundant
+entries.
+
+An engineer would choose a hash table over a list when lookups and updates need to be extremely quick, especially with large sets of data. 
+Hash tables are simpler and often faster when order is unimportant. 
+This makes them suitable for real-world systems such as phonebooks, caches, and databases where rapid access is more important than sorted order.
